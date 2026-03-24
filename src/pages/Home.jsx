@@ -2,7 +2,7 @@ import {myProjects} from '../data/projects.js';
 import ProjectCard from '../components/ProjectCard';
 
 export default function Home() {
-    const featuredProjects = myProjects.slice(0, 2);
+    const featuredProjects = myProjects.slice(0, 3);
 
     return (
         <main className="grid grid-cols-1 md:grid-cols-4 gap-6 p-4 max-w-6xl mx-auto">
@@ -27,21 +27,11 @@ export default function Home() {
                 </p>
             </section>
 
-            {/* 3. Skillset */}
-            <section className="md:col-span-1 bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100">
-                <h2 className="text-lg font-bold mb-4 text-indigo-600">Mijn Skills</h2>
-                <ul className="space-y-2 text-gray-600 font-medium">
-                    <li>⚡ React & Vite</li>
-                    <li>🎨 Tailwind CSS</li>
-                    <li>📦 Git & GitHub</li>
-                </ul>
-            </section>
-
-            {/* 4. Programmeertalen */}
+            {/* 3. Programmeertalen */}
             <section className="md:col-span-2 bg-gray-900 rounded-[2rem] p-8 text-white">
                 <h2 className="text-lg font-bold mb-4 text-emerald-400">Talen</h2>
                 <div className="flex flex-wrap gap-3">
-                    {['JavaScript', 'PHP', 'HTML5', 'CSS3', 'SQL'].map(lang => (
+                    {['JavaScript', 'PHP', 'HTML', 'CSS', 'SQL', 'React', 'Git', 'Python', 'Laravel', 'Express'].map(lang => (
                         <span key={lang} className="px-3 py-1 bg-gray-800 rounded-lg text-sm border border-gray-700">
                             {lang}
                         </span>
@@ -49,7 +39,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 5. CONTACT CARD */}
+            {/* 4. CONTACT CARD */}
             <aside
                 className="md:col-span-1 md:row-span-2 bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100 flex flex-col">
                 <h2 className="text-xl font-bold mb-4">Contact ✉️</h2>
@@ -63,20 +53,24 @@ export default function Home() {
                        className="p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors font-medium text-blue-600 text-center">
                         LinkedIn
                     </a>
+                    <a href="#"
+                       className="p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors font-medium text-blue-600 text-center">
+                        Github
+                    </a>
+                    <a href="#"
+                       className="p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors font-medium text-blue-600 text-center">
+                        Boot.dev
+                    </a>
                 </div>
             </aside>
 
-            {/* 6. Projecten */}
+            {/* 5. Projecten */}
             {featuredProjects.map((project) => (
                 <section key={project.id} className="md:col-span-1">
                     <h2 className="text-[10px] tracking-widest font-black text-gray-400 mb-2 ml-4 uppercase">
                         Project
                     </h2>
-                    <ProjectCard
-                        title={project.title}
-                        description={project.desc}
-                        image={project.img}
-                    />
+                    <ProjectCard {...project} description={project.desc} image={project.img}/>
                 </section>
             ))}
         </main>

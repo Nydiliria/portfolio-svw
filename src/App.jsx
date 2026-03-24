@@ -2,6 +2,7 @@ import {Routes, Route, Link} from 'react-router-dom'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Navbar from './components/Navbar'
+import ProjectDetail from "./pages/ProjectDetail.jsx";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/projects" element={<Projects/>}/>
+                    <Route path="/projects/:id" element={<ProjectDetail/>}/>
                 </Routes>
             </main>
 
