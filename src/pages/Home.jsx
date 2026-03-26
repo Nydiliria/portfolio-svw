@@ -5,20 +5,19 @@ export default function Home() {
     const featuredProjects = myProjects.slice(0, 3);
 
     return (
-        /* Toevoeging: items-stretch zorgt dat kaarten even hoog worden */
         <main className="grid grid-cols-1 md:grid-cols-4 gap-6 p-4 max-w-6xl mx-auto items-stretch">
 
             {/* 1. Profile Image */}
             <figure
                 className="md:col-span-1 md:row-span-2 overflow-hidden rounded-[2rem] shadow-sm border border-white/5 bg-slate-muted/20">
-                <img src="/profileimg.jpg" alt="Sander"
+                <img src="profileimg.jpg" alt="Sander"
                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
             </figure>
 
             {/* 2. Intro/Bio */}
             <section
                 className="md:col-span-3 bg-slate-muted rounded-[2rem] p-10 text-white shadow-xl border border-white/5">
-                <h1 className="text-4xl font-bold mb-4 italic text-soft-sand">Hoi, ik ben Sander!</h1>
+                <h1 className="text-4xl font-bold mb-4 italic text-soft-sand">Hoi, ik ben Sander van Wijngaarden!</h1>
                 <p className="text-xl text-soft-sand opacity-90 leading-relaxed font-light">
                     Ik studeer Creative Media & Game Technologies aan de hogeschool Rotterdam. Het is voor mij
                     belangrijk dat de dingen die ik maak de wereld om mij heen net een beetje leuker maken.
