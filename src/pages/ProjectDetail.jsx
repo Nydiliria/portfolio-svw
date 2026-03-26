@@ -15,8 +15,30 @@ export default function ProjectDetail() {
             </Link>
 
             <header className="relative mb-16">
-                <img src={project.img || '/placeholder.png'} alt={project.title}
-                     className="w-full h-[300px] md:h-[500px] object-cover rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white/5"/>
+                {project.img ? (
+                    <img
+                        src={'' + project.img}
+                        alt={project.title}
+                        className="w-full h-[300px] md:h-[500px] object-cover rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white/5"
+                    />
+                ) : (
+                    /* Grote interactieve placeholder als er geen afbeelding is */
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full h-[300px] md:h-[500px] bg-slate-muted/10 rounded-[2rem] md:rounded-[3rem] border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-4 group hover:border-vibrant-green/50 transition-all duration-500"
+                    >
+                        <div
+                            className="p-6 bg-deep-blue rounded-full shadow-2xl group-hover:scale-110 group-hover:bg-vibrant-green transition-all duration-500">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className="w-12 h-12 invert"
+                                 alt="GitHub"/>
+                        </div>
+                        <p className="text-vibrant-green font-black tracking-widest uppercase text-sm">Bekijk broncode
+                            op GitHub</p>
+                    </a>
+                )}
+
                 <div
                     className="absolute top-6 left-6 bg-burnt-orange text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
                     {project.type || 'Project'}
@@ -54,7 +76,9 @@ export default function ProjectDetail() {
                                 Rol</h4>
                             <p className="text-lg text-white font-semibold">{project.role || 'Developer'}</p>
                         </div>
-                        {project.github && (
+
+                        {/* Toon de knop HIER alleen als er een afbeelding is (om dubbele knoppen te voorkomen) */}
+                        {project.github && project.img && (
                             <a href={project.github} target="_blank" rel="noopener noreferrer"
                                className="flex items-center justify-center gap-3 w-full bg-soft-sand text-deep-blue py-4 rounded-2xl font-black hover:bg-vibrant-green hover:text-white transition-all shadow-xl">
                                 <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className="w-5 h-5"
