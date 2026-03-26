@@ -6,33 +6,35 @@ export default function Home() {
 
     return (
         <main className="grid grid-cols-1 md:grid-cols-4 gap-6 p-4 max-w-6xl mx-auto">
-
             {/* 1. Profile Image */}
             <figure
-                className="md:col-span-1 md:row-span-2 overflow-hidden rounded-[2rem] shadow-sm border border-gray-100 bg-white">
+                className="md:col-span-1 md:row-span-2 overflow-hidden rounded-[2rem] shadow-sm border border-deep-teal/20 bg-accent">
                 <img
                     src="/profileimg.jpg"
-                    alt="Portretfoto van Sander"
+                    alt="Sander"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
             </figure>
 
             {/* 2. Intro/Bio */}
             <section
-                className="md:col-span-3 bg-indigo-600 rounded-[2rem] p-10 text-white flex flex-col justify-center">
-                <h1 className="text-4xl font-bold mb-4 italic">Hoi, ik ben Sander!</h1>
-                <p className="text-xl opacity-90 leading-relaxed font-light">
-                    Ik ben een gedreven developer in opleiding. Ik hou van het bouwen van
-                    gebruiksvriendelijke applicaties en het oplossen van complexe puzzels met code.
+                className="md:col-span-3 bg-slate-muted rounded-[2rem] p-10 text-white shadow-xl border border-white/5">
+                <h1 className="text-4xl font-bold mb-4 italic text-soft-sand">Hoi, ik ben Sander!</h1>
+                <p className="text-xl text-soft-sand opacity-90 leading-relaxed font-light">
+                    Ik studeer Creative Media & Game Technologies aan de hogeschool Rotterdam.
+                    Het is voor mij belangrijk dat de dingen die ik maak de wereld om mij heen net een beetje leuker
+                    maken.
                 </p>
             </section>
 
-            {/* 3. Programmeertalen */}
-            <section className="md:col-span-2 bg-gray-900 rounded-[2rem] p-8 text-white">
-                <h2 className="text-lg font-bold mb-4 text-emerald-400">Talen</h2>
-                <div className="flex flex-wrap gap-3">
-                    {['JavaScript', 'PHP', 'HTML', 'CSS', 'SQL', 'React', 'Git', 'Python', 'Laravel', 'Express'].map(lang => (
-                        <span key={lang} className="px-3 py-1 bg-gray-800 rounded-lg text-sm border border-gray-700">
+            {/* 3. Talen  */}
+            <section
+                className="md:col-span-2 bg-slate-muted rounded-[2rem] p-8 text-white shadow-lg border border-white/5">
+                <h2 className="text-lg font-bold mb-4 text-soft-sand uppercase tracking-wider">Talen</h2>
+                <div className="flex flex-wrap gap-3 text-soft-sand">
+                    {['JavaScript', 'PHP', 'HTML', 'CSS', 'SQL', 'React', 'Git', 'Python', 'Laravel'].map(lang => (
+                        <span key={lang}
+                              className="px-3 py-1 bg-deep-blue/40 rounded-lg text-sm border border-white/10 hover:border-vibrant-green transition-colors">
                             {lang}
                         </span>
                     ))}
@@ -41,24 +43,39 @@ export default function Home() {
 
             {/* 4. CONTACT CARD */}
             <aside
-                className="md:col-span-1 md:row-span-2 bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100 flex flex-col">
-                <h2 className="text-xl font-bold mb-4">Contact ✉️</h2>
-                <p className="text-sm text-gray-500 mb-6">Laten we samenwerken aan je volgende project.</p>
+                className="md:col-span-1 md:row-span-2 bg-soft-sand rounded-[2rem] p-8 shadow-sm border border-deep-teal/10 flex flex-col">
+                <h2 className="text-xl font-bold mb-4 text-deep-blue">Contact ✉️</h2>
+                <p className="text-sm text-deep-blue/60 mb-6 font-medium">Laten we samenwerken aan je volgende
+                    project.</p>
+
                 <div className="flex flex-col gap-4">
-                    <a href="mailto:jouw@email.com"
-                       className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors font-medium text-indigo-600 text-center">
+                    {/* Email */}
+                    <a href="mailto:sander2002@gmail.com"
+                       className="p-3 bg-burnt-orange rounded-xl hover:opacity-90 transition-all font-bold text-white text-center shadow-md">
                         Email mij
                     </a>
-                    <a href="#"
-                       className="p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors font-medium text-blue-600 text-center">
+
+                    {/* LinkedIn */}
+                    <a href="https://www.linkedin.com/in/sander-van-wijngaarden-042450223/"
+                       target="_blank"
+                       rel="noreferrer"
+                       className="p-3 bg-deep-blue/5 rounded-xl hover:bg-vibrant-green hover:text-white transition-all font-medium text-deep-blue text-center border border-deep-blue/10">
                         LinkedIn
                     </a>
-                    <a href="#"
-                       className="p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors font-medium text-blue-600 text-center">
+
+                    {/* Github */}
+                    <a href="https://github.com/Nydiliria"
+                       target="_blank"
+                       rel="noreferrer"
+                       className="p-3 bg-deep-blue/5 rounded-xl hover:bg-vibrant-green hover:text-white transition-all font-medium text-deep-blue text-center border border-deep-blue/10">
                         Github
                     </a>
-                    <a href="#"
-                       className="p-3 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors font-medium text-blue-600 text-center">
+
+                    {/* Boot.dev */}
+                    <a href="https://www.boot.dev/u/nydiliria"
+                       target="_blank"
+                       rel="noreferrer"
+                       className="p-3 bg-deep-blue/5 rounded-xl hover:bg-vibrant-green hover:text-white transition-all font-medium text-deep-blue text-center border border-deep-blue/10">
                         Boot.dev
                     </a>
                 </div>
@@ -67,10 +84,14 @@ export default function Home() {
             {/* 5. Projecten */}
             {featuredProjects.map((project) => (
                 <section key={project.id} className="md:col-span-1">
-                    <h2 className="text-[10px] tracking-widest font-black text-gray-400 mb-2 ml-4 uppercase">
+                    <h2 className="text-[10px] tracking-widest font-black text-soft-sand mb-2 ml-4 uppercase">
                         Project
                     </h2>
-                    <ProjectCard {...project} description={project.desc} image={project.img}/>
+                    <ProjectCard
+                        {...project}
+                        image={project.img}
+                        description={project.desc}
+                    />
                 </section>
             ))}
         </main>

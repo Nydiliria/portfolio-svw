@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+    --color-deep-blue: #0F172A;
+    --color-deep-teal: #264653;
+    --color-vibrant-green: #2A9D8F;
+    --color-accent: #FFFFFF;
+
+    --color-soft-sand: #F1E9DB;
+    --color-burnt-orange: #E76F51;
+    --color-electric-indigo: #4F46E5;
+    --color-slate-muted: #64748B;
+}
+
+@layer base {
+    body {
+        @apply bg-deep-blue text-soft-sand antialiased;
+    }
+}

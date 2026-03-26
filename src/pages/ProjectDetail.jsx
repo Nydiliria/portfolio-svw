@@ -9,7 +9,7 @@ export default function ProjectDetail() {
 
     return (
         <article className="max-w-4xl mx-auto py-10 animate-in fade-in duration-500">
-            <Link to="/projects" className="text-indigo-600 font-medium mb-8 inline-block hover:underline">
+            <Link to="/projects" className="text-vibrant-green font-bold mb-8 inline-block hover:text-deep-teal">
                 ← Terug naar overzicht
             </Link>
 
@@ -18,8 +18,10 @@ export default function ProjectDetail() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div className="md:col-span-2">
-                    <h1 className="text-5xl font-black mb-6 tracking-tighter">{project.title}</h1>
-                    <p className="text-xl text-gray-600 leading-relaxed mb-8">{project.longDesc}</p>
+                    <h1 className="text-5xl font-black mb-6 text-warm-gold">{project.title}</h1>
+                    <p className="text-xl text-white/90 leading-relaxed font-light">
+                        {project.longDesc}
+                    </p>
                 </div>
 
                 <div className="space-y-8">
@@ -32,8 +34,7 @@ export default function ProjectDetail() {
                         <p className="text-lg font-semibold capitalize">{project.type}</p>
                     </div>
                     {project.github && (
-                        <a href={project.github} target="_blank" rel="noreferrer"
-                           className="block w-full text-center bg-black text-white py-4 rounded-2xl font-bold hover:bg-gray-800 transition-all">
+                        <a href={project.github} className="bg-deep-blue text-accent hover:bg-vibrant-green ...">
                             Bekijk Source Code
                         </a>
                     )}
