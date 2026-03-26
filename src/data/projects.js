@@ -25,6 +25,18 @@ export const myProjects = [
     },
     {
         id: 3,
+        title: "Portfolio",
+        desc: "Het prachtige portfolio waar u nu naar kijkt is handgemaakt",
+        longDesc: "Dit porfolio is bedoeld om mijn persoonlijke progressie als creatief technoloog te laten zien.",
+        img: "portfolio.png",
+        github: "https://github.com/Nydiliria/portfolio-svw",
+        client: "",
+        type: "persoonlijk",
+        role: "Developer",
+        tech: ["React", "Tailwindcss"]
+    },
+    {
+        id: 4,
         title: "LeafLink",
         desc: "Een web-app om studenten te helpen beter voor hun planten te zorgen",
         longDesc: "Leaflink is een web-app die studenten door middel van informatievoorziening en een plant-tamagotchi moet helpen om beter voor hun geliefde planten te zorgen.",
@@ -36,7 +48,7 @@ export const myProjects = [
         tech: ["PHP", "HTML/CSS", "JavaScript"]
     },
     {
-        id: 4,
+        id: 5,
         title: "Game of thrones characters front-end",
         desc: "Een schoolopdracht om de basics van React te leren",
         longDesc: "Een schoolopdracht, apart opgedeeld in de front- en backend om de basics van react en express onder de knie te krijgen.",
@@ -48,7 +60,7 @@ export const myProjects = [
         tech: ["React", "Tailwindcss", "JavaScript"]
     },
     {
-        id: 5,
+        id: 6,
         title: "Game of thrones characters back-end",
         desc: "Een schoolopdracht om de basics van Express te leren",
         longDesc: "Een schoolopdracht, apart opgedeeld in de front- en backend om de basics van react en express onder de knie te krijgen.",
@@ -60,7 +72,7 @@ export const myProjects = [
         tech: ["Express", "JavaScript"]
     },
     {
-        id: 6,
+        id: 7,
         title: "Bookbot",
         desc: "Een klein python project via boot.dev om van een gegeven boek het aantal woorden te tellen",
         longDesc: "Een klein python project via boot.dev om van een gegeven boek het aantal woorden te tellen, ook is het mogelijk om te kijken hoe vaak elk alfabetisch karakter in het gegeven boek voorkomt.",

@@ -1,28 +1,27 @@
-import {Routes, Route, Link} from 'react-router-dom'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import Navbar from './components/Navbar'
+import {Routes, Route} from 'react-router-dom';
+import NotFound from "./pages/NotFound.jsx";
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Navbar from './components/Navbar';
 import ProjectDetail from "./pages/ProjectDetail.jsx";
 
 function App() {
     return (
-        <div className="min-h-screen font-sans text-gray-900">
+        <div className="min-h-screen font-sans bg-deep-blue">
             <Navbar/>
-
-            {/* Pagina Wisselaar */}
             <main className="max-w-6xl mx-auto p-6">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/projects" element={<Projects/>}/>
                     <Route path="/projects/:id" element={<ProjectDetail/>}/>
+                    <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </main>
-
-            <footer className="text-center p-10 text-gray-400 text-sm">
-                © 2026 - Gebouwd met React & Tailwind
+            <footer className="text-center p-10 text-white/20 text-sm">
+                © 2026 - Sander van Wijngaarden
             </footer>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;
