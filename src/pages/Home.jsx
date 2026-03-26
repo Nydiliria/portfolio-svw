@@ -20,7 +20,8 @@ export default function Home() {
                 <h1 className="text-4xl font-bold mb-4 italic text-soft-sand">Hoi, ik ben Sander van Wijngaarden!</h1>
                 <p className="text-xl text-soft-sand opacity-90 leading-relaxed font-light">
                     Ik studeer Creative Media & Game Technologies aan de hogeschool Rotterdam. Het is voor mij
-                    belangrijk dat de dingen die ik maak de wereld om mij heen net een beetje leuker maken.
+                    belangrijk dat de dingen die ik maak de wereld om mij heen net een beetje leuker maken. Momenteel
+                    ben ik op zoek naar een leuke stageplek!
                 </p>
             </section>
 
@@ -43,9 +44,9 @@ export default function Home() {
                 className="md:col-span-1 md:row-span-2 bg-soft-sand rounded-[2rem] p-8 shadow-sm border border-white/10 flex flex-col h-full">
                 <div className="flex flex-col gap-5">
                     <div>
-                        <h2 className="text-xl font-bold mb-2 text-deep-blue">Contact ✉️</h2>
+                        <h2 className="text-xl font-bold mb-2 text-deep-blue">Contact</h2>
                         <p className="text-sm text-deep-blue/60 font-medium leading-relaxed">
-                            Laten we samenwerken aan je volgende project.
+                            Neem contact op, of bekijk mijn werk op andere plekken.
                         </p>
                     </div>
 
